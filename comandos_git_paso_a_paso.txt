@@ -1,0 +1,112 @@
+═══════════════════════════════════════════════════════════════
+  COMANDOS GIT - PASO A PASO PARA SUBIR A GITHUB
+═══════════════════════════════════════════════════════════════
+
+Una vez que Git esté instalado, ejecuta estos comandos en orden:
+
+───────────────────────────────────────────────────────────────
+PASO 1: Verificar que Git está instalado
+───────────────────────────────────────────────────────────────
+git --version
+
+(Debería mostrar algo como: git version 2.x.x)
+
+
+───────────────────────────────────────────────────────────────
+PASO 2: Configurar tu información (solo primera vez)
+───────────────────────────────────────────────────────────────
+git config --global user.name "Andres Matallana"
+git config --global user.email "tu.email@ejemplo.com"
+
+(Reemplaza con tu información real)
+
+
+───────────────────────────────────────────────────────────────
+PASO 3: Inicializar el repositorio
+───────────────────────────────────────────────────────────────
+git init
+
+(Esto crea la carpeta .git en tu proyecto)
+
+
+───────────────────────────────────────────────────────────────
+PASO 4: Ver qué archivos se van a agregar
+───────────────────────────────────────────────────────────────
+git status
+
+(Revisa que NO aparezcan archivos sensibles como token.json)
+
+
+───────────────────────────────────────────────────────────────
+PASO 5: Agregar todos los archivos al staging
+───────────────────────────────────────────────────────────────
+git add .
+
+(Esto agrega todos los archivos excepto los del .gitignore)
+
+
+───────────────────────────────────────────────────────────────
+PASO 6: Verificar qué se va a commitear
+───────────────────────────────────────────────────────────────
+git status
+
+(Deberías ver los archivos en verde, listos para commit)
+
+
+───────────────────────────────────────────────────────────────
+PASO 7: Hacer el commit inicial
+───────────────────────────────────────────────────────────────
+git commit -m "Initial commit: Proyecto de predicción SPY con RAG chatbot integrado"
+
+
+───────────────────────────────────────────────────────────────
+PASO 8: Agregar el repositorio remoto
+───────────────────────────────────────────────────────────────
+# Opción A: SSH (si tienes SSH keys configuradas)
+git remote add origin git@github.com:AndresMlz/trading_XAI.git
+
+# Opción B: HTTPS (más simple, no requiere SSH)
+git remote add origin https://github.com/AndresMlz/trading_XAI.git
+
+
+───────────────────────────────────────────────────────────────
+PASO 9: Verificar que el remote se agregó
+───────────────────────────────────────────────────────────────
+git remote -v
+
+(Debería mostrar la URL del repositorio)
+
+
+───────────────────────────────────────────────────────────────
+PASO 10: Renombrar la rama a 'main' (si es necesario)
+───────────────────────────────────────────────────────────────
+git branch -M main
+
+
+───────────────────────────────────────────────────────────────
+PASO 11: Subir el código a GitHub
+───────────────────────────────────────────────────────────────
+git push -u origin main
+
+(Esto subirá todos tus archivos a GitHub)
+
+═══════════════════════════════════════════════════════════════
+
+NOTAS IMPORTANTES:
+
+⚠️  Si usas SSH y te da error de autenticación:
+   - Necesitas tener SSH keys configuradas en GitHub
+   - O cambia a HTTPS en el PASO 8
+
+⚠️  Si usas HTTPS y te pide credenciales:
+   - Usuario: tu nombre de usuario de GitHub
+   - Contraseña: usa un Personal Access Token (no tu contraseña)
+   - Cómo crear token: GitHub → Settings → Developer settings → 
+     Personal access tokens → Tokens (classic) → Generate new token
+
+⚠️  Si el repositorio remoto ya tiene contenido:
+   - Primero ejecuta: git pull origin main --allow-unrelated-histories
+   - Luego: git push -u origin main
+
+═══════════════════════════════════════════════════════════════
+

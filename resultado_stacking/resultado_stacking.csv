@@ -1,0 +1,2 @@
+pred_class_name,pred_prob,candlesticks_pattern,pattern_signal,pattern_conf,etiqueta_transformer,pred_prob_x_conf,pred_prob_x_signal,final_pred,confidence,executed
+,0.5837090611457825,0,2,0.4609280228614807,0,0.26904786348025667,1.167418122291565,SELL,0.8029039220995734,ACTIVA

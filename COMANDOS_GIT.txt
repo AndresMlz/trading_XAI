@@ -1,0 +1,146 @@
+═══════════════════════════════════════════════════════════════
+  COMANDOS GIT RÁPIDOS PARA ESTE PROYECTO
+═══════════════════════════════════════════════════════════════
+
+📋 CONFIGURACIÓN INICIAL (Solo la primera vez)
+───────────────────────────────────────────────────────────────
+
+1. Verificar si Git está instalado:
+   git --version
+
+2. Si no está instalado, descarga desde:
+   https://git-scm.com/download/win
+
+3. Configurar tu información (solo una vez):
+   git config --global user.name "Tu Nombre"
+   git config --global user.email "tu.email@ejemplo.com"
+
+4. Inicializar el repositorio:
+   git init
+
+5. O usar el script automatizado:
+   .\setup_git.ps1
+
+
+📦 COMANDOS BÁSICOS
+───────────────────────────────────────────────────────────────
+
+Ver el estado del repositorio:
+   git status
+
+Agregar todos los archivos (excepto .gitignore):
+   git add .
+
+Agregar un archivo específico:
+   git add nombre_archivo.py
+
+Ver qué cambios se van a commitear:
+   git diff --staged
+
+Hacer un commit:
+   git commit -m "Descripción de los cambios"
+
+Ver el historial de commits:
+   git log
+   git log --oneline          (versión compacta)
+   git log --graph --oneline  (con gráfico)
+
+
+🔄 TRABAJAR CON CAMBIOS
+───────────────────────────────────────────────────────────────
+
+Ver qué archivos cambiaron:
+   git status
+
+Ver los cambios en detalle:
+   git diff
+
+Agregar cambios y commitear:
+   git add .
+   git commit -m "Mensaje descriptivo"
+
+Deshacer cambios en un archivo (antes de git add):
+   git checkout -- nombre_archivo.py
+
+Deshacer git add (quitar del staging):
+   git reset nombre_archivo.py
+
+
+🌐 CONECTAR CON REPOSITORIO REMOTO (GitHub/GitLab)
+───────────────────────────────────────────────────────────────
+
+1. Crear un repositorio en GitHub/GitLab (vacío, sin README)
+
+2. Conectar tu repositorio local:
+   git remote add origin https://github.com/tu-usuario/tu-repo.git
+
+3. Verificar la conexión:
+   git remote -v
+
+4. Subir el código:
+   git branch -M main
+   git push -u origin main
+
+5. Para subir cambios futuros:
+   git push
+
+
+📁 RAMAS (BRANCHES)
+───────────────────────────────────────────────────────────────
+
+Crear una nueva rama:
+   git checkout -b nombre-rama
+   O: git switch -c nombre-rama
+
+Ver ramas:
+   git branch
+
+Cambiar de rama:
+   git checkout nombre-rama
+   O: git switch nombre-rama
+
+Fusionar una rama:
+   git checkout main
+   git merge nombre-rama
+
+
+⚠️ IMPORTANTE - ANTES DE HACER COMMIT
+───────────────────────────────────────────────────────────────
+
+1. Verificar que NO estás subiendo:
+   ❌ config/token.json
+   ❌ config/credentials.json
+   ❌ Cualquier archivo con API keys o credenciales
+
+2. Revisar qué se va a commitear:
+   git status
+   git diff --staged
+
+3. Si accidentalmente agregaste un archivo sensible:
+   git reset HEAD nombre_archivo
+   (luego agrégalo al .gitignore)
+
+
+🔍 VERIFICAR Y LIMPIAR
+───────────────────────────────────────────────────────────────
+
+Ver archivos ignorados:
+   git status --ignored
+
+Ver qué archivos están siendo rastreados:
+   git ls-files
+
+Limpiar archivos no rastreados (CUIDADO):
+   git clean -n    (simulación, muestra qué se eliminaría)
+   git clean -f    (elimina archivos no rastreados)
+
+
+📚 MÁS INFORMACIÓN
+───────────────────────────────────────────────────────────────
+
+Ver documentación completa en: README_GIT.md
+
+Ayuda de Git:
+   git help
+   git help <comando>    (ej: git help commit)
+

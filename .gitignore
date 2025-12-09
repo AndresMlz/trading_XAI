@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+venv_bot/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Streamlit
+.streamlit/
+
+# Credenciales y tokens (IMPORTANTE: no subir credenciales)
+config/token.json
+config/credentials.json
+*.pem
+*.key
+
+# Archivos de configuración sensibles (revisar antes de commitear)
+# config/config.json  # Descomentar si contiene información sensible
+
+# Modelos y datos grandes (opcional, descomentar si no quieres subirlos)
+# archivos_modelos/
+# outputs/
+# inputs/*.csv
+# data_ind_tecnicos/
+# resultado_stacking/
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# Archivos compilados
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de build
+*.spec
+build/
+dist/
+

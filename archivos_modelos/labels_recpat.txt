@@ -1,0 +1,14 @@
+ascending-triangle
+bearish-flag
+bullish-flag
+descending-triangle
+double-bottom
+double-top
+falling-wedge
+head-and-shoulders
+inverse-head-and-shoulders
+rising-wedge
+rounding-bottom
+rounding-top
+triple-bottom
+triple-top

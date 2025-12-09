@@ -1,0 +1,15 @@
+{
+  "ckpt_filename": "modelo_cnn.h5",
+  "trial_id": "77390fae",
+  "val_macroF1": 0.6096450006319716,
+  "test_macroF1": 0.6099538873488144,
+  "BACKBONE": "mobilenet_v3_small",
+  "IMG_SIZE": 224,
+  "DROPOUT": 0.3,
+  "NUM_CLASSES": 3,
+  "CLASS_NAMES": {
+    "0": "HOLD",
+    "1": "BUY",
+    "2": "SELL"
+  }
+}
